@@ -1,6 +1,6 @@
 # Trovo Provider for OAuth 2.0 Client
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![codecov](https://codecov.io/gh/artandor/oauth2-trovo/branch/main/graph/badge.svg?token=sAB4ucNgp1)](https://codecov.io/gh/artandor/oauth2-trovo)
+[![codecov](https://codecov.io/gh/artandor/oauth2-trovo/branch/main/graph/badge.svg?token=o4quAc72Bl)](https://codecov.io/gh/artandor/oauth2-trovo)
 
 This package provides Trovo OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 It follows https://developer.trovo.live/docs
