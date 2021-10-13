@@ -1,28 +1,28 @@
-# Brime Provider for OAuth 2.0 Client
+# Trovo Provider for OAuth 2.0 Client
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![codecov](https://codecov.io/gh/vasilvestre/oauth2-brimetv/branch/main/graph/badge.svg?token=sAB4ucNgp1)](https://codecov.io/gh/vasilvestre/oauth2-brimetv)
+[![codecov](https://codecov.io/gh/artandor/oauth2-trovo/branch/main/graph/badge.svg?token=sAB4ucNgp1)](https://codecov.io/gh/artandor/oauth2-trovo)
 
-This package provides Brime OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
-It follows https://api-docs.brime.tv/.
+This package provides Trovo OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
+It follows https://developer.trovo.live/docs
 
 ## Installation
 
 To install, use composer:
 
 ```
-composer require vasilvestre/oauth2-brimetv
+composer require artandor/oauth2-trovo
 ```
 
 ## Usage
 
-Usage is the same as The League's OAuth client, using `\League\OAuth2\Client\Provider\Github` as the provider.
+Usage is the same as The League's OAuth client, using `Artandor\Oauth2Trovo\Trovo` as the provider.
 
 ### Authorization Code Flow
 
 ```php
-$provider = new League\OAuth2\Client\Provider\Brime([
-    'clientId'          => '{brime-client-id}',
-    'clientSecret'      => '{brime-client-secret}',
+$provider = new Artandor\Oauth2Trovo\Trovo([
+    'clientId'          => '{trovo-client-id}',
+    'clientSecret'      => '{trovo-client-secret}',
     'redirectUri'       => 'https://example.com/callback-url',
 ]);
 
@@ -77,10 +77,8 @@ $ ./vendor/bin/phpunit
 
 ## Credits
 
-- [Valentin Silvestre](https://github.com/vasilvestre)
 - [Nicolas Mylle](https://github.com/artandor)
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/thephpleague/oauth2-github/blob/master/LICENSE) for more information.
-# oauth2-trovo
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
