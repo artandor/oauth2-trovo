@@ -22,17 +22,17 @@ class Trovo extends AbstractProvider
 
     public function getBaseAuthorizationUrl(): string
     {
-        return "https://open.trovo.live" . self::AUTHORIZE_PATH;
+        return 'https://open.trovo.live'.self::AUTHORIZE_PATH;
     }
 
     public function getBaseAccessTokenUrl(array $params): string
     {
-        return $this->basicUrl . self::OAUTH_TOKEN_PATH;
+        return $this->basicUrl.self::OAUTH_TOKEN_PATH;
     }
 
     public function getResourceOwnerDetailsUrl(AccessToken $token): string
     {
-        return $this->basicUrl . self::USER_RESOURCE;
+        return $this->basicUrl.self::USER_RESOURCE;
     }
 
     protected function getDefaultScopes(): array
@@ -53,8 +53,7 @@ class Trovo extends AbstractProvider
     }
 
     /**
-     * Returns the string that should be used to separate scopes when building
-     * the URL for requesting an access token.
+     * Returns the string that should be used to separate scopes when building the URL for requesting an access token.
      *
      * @return string Scope separator, defaults to ','
      */
@@ -66,20 +65,21 @@ class Trovo extends AbstractProvider
     /**
      * Returns authorization headers for the 'bearer' grant.
      *
-     * @param  AccessTokenInterface|string|null $token Either a string or an access token instance
+     * @param AccessTokenInterface|string|null $token Either a string or an access token instance
+     *
      * @return array
      */
     protected function getAuthorizationHeaders($token = null)
     {
         return [
-            'Authorization' => 'OAuth ' . $token
+            'Authorization' => 'OAuth '.$token,
         ];
     }
 
     /**
      * Returns the default headers used by this provider.
      *
-     * Typically this is used to set 'Accept' or 'Content-Type' headers.
+     * Typically, this is used to set 'Accept' or 'Content-Type' headers.
      *
      * @return array
      */
@@ -87,7 +87,7 @@ class Trovo extends AbstractProvider
     {
         return [
             'client-id' => $_ENV['OAUTH_TROVO_CLIENT_ID'],
-            'Content-Type' => 'application/json'
+            'Content-Type' => 'application/json',
         ];
     }
 
@@ -95,12 +95,13 @@ class Trovo extends AbstractProvider
      * Returns a prepared request for requesting an access token.
      *
      * @param array $params Query string parameters
+     *
      * @return RequestInterface
      */
     protected function getAccessTokenRequest(array $params)
     {
-        $method  = $this->getAccessTokenMethod();
-        $url     = $this->getAccessTokenUrl($params);
+        $method = $this->getAccessTokenMethod();
+        $url = $this->getAccessTokenUrl($params);
         $options = $this->optionProvider->getAccessTokenOptions($this->getAccessTokenMethod(), $params);
         $options['body'] = json_encode($params);
 
