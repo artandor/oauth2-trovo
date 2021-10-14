@@ -22,17 +22,17 @@ class Trovo extends AbstractProvider
 
     public function getBaseAuthorizationUrl(): string
     {
-        return "https://open.trovo.live" . self::AUTHORIZE_PATH;
+        return "https://open.trovo.live".self::AUTHORIZE_PATH;
     }
 
     public function getBaseAccessTokenUrl(array $params): string
     {
-        return $this->basicUrl . self::OAUTH_TOKEN_PATH;
+        return $this->basicUrl.self::OAUTH_TOKEN_PATH;
     }
 
     public function getResourceOwnerDetailsUrl(AccessToken $token): string
     {
-        return $this->basicUrl . self::USER_RESOURCE;
+        return $this->basicUrl.self::USER_RESOURCE;
     }
 
     protected function getDefaultScopes(): array
@@ -72,7 +72,7 @@ class Trovo extends AbstractProvider
     protected function getAuthorizationHeaders($token = null)
     {
         return [
-            'Authorization' => 'OAuth ' . $token
+            'Authorization' => 'OAuth '.$token
         ];
     }
 
