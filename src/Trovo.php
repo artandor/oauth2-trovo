@@ -100,8 +100,8 @@ class Trovo extends AbstractProvider
      */
     protected function getAccessTokenRequest(array $params)
     {
-        $method  = $this->getAccessTokenMethod();
-        $url     = $this->getAccessTokenUrl($params);
+        $method = $this->getAccessTokenMethod();
+        $url = $this->getAccessTokenUrl($params);
         $options = $this->optionProvider->getAccessTokenOptions($this->getAccessTokenMethod(), $params);
         $options['body'] = json_encode($params);
 
