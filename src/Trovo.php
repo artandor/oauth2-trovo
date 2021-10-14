@@ -53,8 +53,7 @@ class Trovo extends AbstractProvider
     }
 
     /**
-     * Returns the string that should be used to separate scopes when building
-     * the URL for requesting an access token.
+     * Returns the string that should be used to separate scopes when building the URL for requesting an access token.
      *
      * @return string Scope separator, defaults to ','
      */
@@ -66,13 +65,13 @@ class Trovo extends AbstractProvider
     /**
      * Returns authorization headers for the 'bearer' grant.
      *
-     * @param  AccessTokenInterface|string|null $token Either a string or an access token instance
+     * @param AccessTokenInterface|string|null $token Either a string or an access token instance
      * @return array
      */
     protected function getAuthorizationHeaders($token = null)
     {
         return [
-            'Authorization' => 'OAuth '.$token
+            'Authorization' => 'OAuth '.$token,
         ];
     }
 
@@ -95,6 +94,7 @@ class Trovo extends AbstractProvider
      * Returns a prepared request for requesting an access token.
      *
      * @param array $params Query string parameters
+     * 
      * @return RequestInterface
      */
     protected function getAccessTokenRequest(array $params)
