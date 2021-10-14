@@ -22,7 +22,7 @@ class Trovo extends AbstractProvider
 
     public function getBaseAuthorizationUrl(): string
     {
-        return "https://open.trovo.live".self::AUTHORIZE_PATH;
+        return 'https://open.trovo.live'.self::AUTHORIZE_PATH;
     }
 
     public function getBaseAccessTokenUrl(array $params): string
@@ -87,7 +87,7 @@ class Trovo extends AbstractProvider
     {
         return [
             'client-id' => $_ENV['OAUTH_TROVO_CLIENT_ID'],
-            'Content-Type' => 'application/json'
+            'Content-Type' => 'application/json',
         ];
     }
 
