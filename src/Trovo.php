@@ -66,6 +66,7 @@ class Trovo extends AbstractProvider
      * Returns authorization headers for the 'bearer' grant.
      *
      * @param AccessTokenInterface|string|null $token Either a string or an access token instance
+     *
      * @return array
      */
     protected function getAuthorizationHeaders($token = null)
@@ -78,7 +79,7 @@ class Trovo extends AbstractProvider
     /**
      * Returns the default headers used by this provider.
      *
-     * Typically this is used to set 'Accept' or 'Content-Type' headers.
+     * Typically, this is used to set 'Accept' or 'Content-Type' headers.
      *
      * @return array
      */
@@ -94,7 +95,7 @@ class Trovo extends AbstractProvider
      * Returns a prepared request for requesting an access token.
      *
      * @param array $params Query string parameters
-     * 
+     *
      * @return RequestInterface
      */
     protected function getAccessTokenRequest(array $params)
